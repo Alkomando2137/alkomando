@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALKOMANDO</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+    header {
+      background-color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    header img {
+      max-height: 100px;
+      width: auto;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      background-color: #1a1a1a;
+      padding: 10px;
+    }
+    nav a {
+      color: #fff;
+      margin: 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #b30000;
+    }
+    section {
+      padding: 40px;
+    }
+    .sklep, .kontakt, .galeria, .muzyka {
+      background-color: #1a1a1a;
+      margin-top: 20px;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #b30000;
+      margin-top: 40px;
+    }
+    .galeria img {
+      width: 100%;
+      max-width: 200px;
+      margin: 10px;
+      border: 2px solid #b30000;
+      border-radius: 8px;
+    }
+    .galeria div {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .instagram-feed {
+      margin-top: 20px;
+    }
+    .instagram-feed iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+    }
+
+    /* RESPONSYWNE STYLE */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+      section {
+        padding: 20px;
+      }
+      .galeria img {
+        max-width: 100%;
+        margin: 10px 0;
+      }
+      .muzyka audio {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <!-- Miejsce na logo -->
+    <img src="logo-placeholder.png" alt="Logo ALKOMANDO">
+  </header>
+
+  <nav>
+    <a href="#onas">O nas</a>
+    <a href="#sklep">Sklep</a>
+    <a href="#galeria">Galeria</a>
+    <a href="#muzyka">Muzyka</a>
+    <a href="#kontakt">Kontakt</a>
+  </nav>
+
+  <section id="onas">
+    <h1>O nas</h1>
+    <p>Jesteśmy ALKOMANDO – ekipą rapową tworzącą bez kompromisów. Nasza muzyka to połączenie ulicznej szczerości z mocnym brzmieniem. Działamy z pasją i bez cenzury.</p>
+  </section>
+
+  <section id="sklep" class="sklep">
+    <h2>Sklep</h2>
+    <p>Wkrótce uruchomimy nasz sklep z limitowaną kolekcją merchu ALKOMANDO. Zostań z nami!</p>
+  </section>
+
+  <section id="galeria" class="galeria">
+    <h2>Galeria</h2>
+    <div>
+      <img src="galeria1.jpg" alt="Zdjęcie 1">
+      <img src="galeria2.jpg" alt="Zdjęcie 2">
+      <img src="galeria3.jpg" alt="Zdjęcie 3">
+    </div>
+  </section>
+
+  <section id="muzyka" class="muzyka">
+    <h2>Muzyka</h2>
+    <audio controls>
+      <source src="muzyka1.mp3" type="audio/mpeg">
+      Twoja przeglądarka nie obsługuje odtwarzacza audio.
+    </audio>
+    <audio controls>
+      <source src="muzyka2.mp3" type="audio/mpeg">
+      Twoja przeglądarka nie obsługuje odtwarzacza audio.
+    </audio>
+  </section>
+
+  <section id="kontakt" class="kontakt">
+    <h2>Kontakt</h2>
+    <p>Email: kontakt@alkomando.pl</p>
+    <p>Instagram: <a href="https://instagram.com/alkomando" style="color: #b30000;">@alkomando</a></p>
+    <div class="instagram-feed">
+      <iframe src="https://snapwidget.com/embed/your-instagram-widget-id"></iframe>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 ALKOMANDO. Wszelkie prawa zastrzeżone.
+  </footer>
+</body>
+</html>
