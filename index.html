@@ -3,23 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
   <title>ALKOMANDO</title>
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: Roboto, sans-serif;
       background-color: #000;
       color: #fff;
     }
-    header {
-      background-color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-    header img {
-      max-height: 100px;
-      width: auto;
-    }
+  /* Styl nagłówka */
+header {
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Styl napisu "ALKOMANDO" z czcionką Rubik */
+header h1 {
+  font-family: 'Rubik', sans-serif;
+  font-size: 50px; /* Duży rozmiar czcionki */
+  font-weight: 700; /* Grubszy wariant czcionki */
+  color: #1a1a1a;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 3px; /* Zwiększ trochę odstępy między literami */
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2); /* Delikatny cień dla tekstu */
+}
     nav {
       display: flex;
       justify-content: center;
@@ -176,45 +188,161 @@ nav a:hover {
   color: #b30000;
 }
 
-/* Styl przycisków z ikonkami */
+/* Styl przycisków z logo */
 .social-icon {
   display: inline-block;
   margin: 0 10px;
-  padding: 10px;
-  font-size: 24px;
+  padding: 5px;
   border-radius: 50%;
   background-color: #fff;
-  color: #1a1a1a;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
+/* Przypisz wielkość logo */
+.social-icon img {
+  width: 20px; /* Możesz zmienić na inną wartość, zależnie od wielkości logo */
+  height: 20px;
+  object-fit: cover; /* Zapewnia, że obrazek jest dobrze przycięty */
 }
 
 /* Kolory dla poszczególnych ikon */
 .social-icon.instagram {
   background-color: #e1306c;
-  color: white;
 }
 
 .social-icon.facebook {
-  background-color: #1877f2;
-  color: white;
+  background-color: #3b5998;
 }
 
 .social-icon.youtube {
   background-color: #ff0000;
-  color: white;
 }
 
 /* Efekt przy najechaniu */
 .social-icon:hover {
   background-color: #b30000;
-  color: white;
+}
+/* Styl sekcji sklepu */
+.skep {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.skep h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.skep p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* Styl produktów */
+.produkty {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.produkt {
+  background-color: #333;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px;
+  width: 220px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.produkt img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.produkt h3 {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.produkt p {
+  font-size: 16px;
+}
+
+.cena {
+  font-size: 20px;
+  font-weight: bold;
+  color: #b30000;
+}
+
+.add-to-cart {
+  padding: 10px 20px;
+  background-color: #b30000;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-to-cart:hover {
+  background-color: #800000;
+}
+
+/* Koszyk */
+#koszyk {
+  background-color: #222;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 30px;
+  color: #fff;
+}
+
+#koszyk h3 {
+  font-size: 24px;
+}
+
+#cart-items {
+  list-style: none;
+  padding: 0;
+}
+
+#cart-items li {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+#total-price {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+#checkout {
+  padding: 10px 20px;
+  background-color: #b30000;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+#checkout:hover {
+  background-color: #800000;
 }
   </style>
 </head>
 <body>
   <header>
     <!-- Miejsce na logo -->
-    <img src="logo-placeholder.png" alt="Logo ALKOMANDO">
+     <h1>ALKOMANDO</h1>
   </header>
 
  <nav>
@@ -224,15 +352,19 @@ nav a:hover {
   <a href="#muzyka">Muzyka</a>
   <a href="#kontakt">Kontakt</a>
 
-  <!-- Ikony mediów społecznościowych -->
+  <!-- Przycisk Instagram -->
   <a href="https://www.instagram.com/rambo_p2ws" target="_blank" class="social-icon instagram">
-    <i class="fab fa-instagram"></i>
+    <img src="images/instagram.svg" alt="Instagram Logo">
   </a>
-  <a href="https://www.facebook.com/profile.php?viewas=100000686899395&id=100055085780151" target="_blank" class="social-icon facebook">
-    <i class="fab fa-facebook"></i>
+  
+  <!-- Przycisk Facebook -->
+  <a href="https://www.facebook.com/alkomando" target="_blank" class="social-icon facebook">
+    <img src="images/facebook-logo.png" alt="Facebook Logo">
   </a>
+  
+  <!-- Przycisk YouTube -->
   <a href="https://www.youtube.com/@alkomando2137" target="_blank" class="social-icon youtube">
-    <i class="fab fa-youtube"></i>
+    <img src="images/youtube-logo.png" alt="YouTube Logo">
   </a>
 </nav>
 
@@ -241,10 +373,59 @@ nav a:hover {
     <p>Jesteśmy ALKOMANDO – ekipą rapową tworzącą bez kompromisów. Nasza muzyka to połączenie ulicznej szczerości z mocnym brzmieniem. Działamy z pasją i bez cenzury.</p>
   </section>
 
-  <section id="sklep" class="sklep">
-    <h2>Sklep</h2>
-    <p>Wkrótce uruchomimy nasz sklep z limitowaną kolekcją merchu ALKOMANDO. Zostań z nami!</p>
-  </section>
+<section id="sklep" class="sklep">
+  <h2>Sklep</h2>
+ 
+
+  <!-- Produkty -->
+  <div class="produkty">
+    <!-- Produkt 1 - Płyta -->
+    <div class="produkt">
+      <img src="plyta.jpg" alt="Płyta ALKOMANDO">
+      <h3>Płyta ALKOMANDO</h3>
+      <p>Wielki powrót! Nowa płyta w limitowanej edycji.</p>
+      <p class="cena">79,99 zł</p>
+      <button class="add-to-cart" data-product="plyta">Dodaj do koszyka</button>
+    </div>
+
+    <!-- Produkt 2 - Koszulka -->
+    <div class="produkt">
+      <img src="koszulka.jpg" alt="Koszulka ALKOMANDO">
+      <h3>Koszulka ALKOMANDO</h3>
+      <p>Stylowa koszulka z logo ALKOMANDO, idealna na każdy dzień.</p>
+      <p class="cena">49,99 zł</p>
+      <button class="add-to-cart" data-product="koszulka">Dodaj do koszyka</button>
+    </div>
+
+    <!-- Produkt 3 - Bluza -->
+    <div class="produkt">
+      <img src="bluza.jpg" alt="Bluza ALKOMANDO">
+      <h3>Bluza ALKOMANDO</h3>
+      <p>Wygodna i ciepła bluza, która rozgrzeje w chłodne dni.</p>
+      <p class="cena">129,99 zł</p>
+      <button class="add-to-cart" data-product="bluza">Dodaj do koszyka</button>
+    </div>
+
+    <!-- Produkt 4 - Box -->
+    <div class="produkt">
+      <img src="box.jpg" alt="Box ALKOMANDO">
+      <h3>Box ALKOMANDO</h3>
+      <p>Limitowana edycja! Zawiera płytę, koszulkę i inne unikalne gadżety.</p>
+      <p class="cena">199,99 zł</p>
+      <button class="add-to-cart" data-product="box">Dodaj do koszyka</button>
+    </div>
+  </div>
+
+  <!-- Koszyk -->
+  <div id="koszyk">
+    <h3>Twój koszyk:</h3>
+    <ul id="cart-items">
+      <!-- Produkty w koszyku będą tutaj dodane -->
+    </ul>
+    <p id="total-price">Całkowita cena: 0,00 zł</p>
+    <button id="checkout">Przejdź do kasy</button>
+  </div>
+</section>
 
   <section id="galeria" class="galeria">
   <h2>Galeria</h2>
@@ -313,6 +494,52 @@ nav a:hover {
   function closeLightbox() {
     document.getElementById('lightbox').style.display = 'none';
   }
+  // Przechowujemy produkty w koszyku
+let cart = [];
+
+// Funkcja do dodawania produktów do koszyka
+function addToCart(product) {
+  cart.push(product);
+  updateCart();
+}
+
+// Funkcja do aktualizacji koszyka
+function updateCart() {
+  const cartItems = document.getElementById('cart-items');
+  const totalPriceElement = document.getElementById('total-price');
+  
+  cartItems.innerHTML = ''; // Czyścimy listę
+  let totalPrice = 0;
+
+  cart.forEach(item => {
+    const li = document.createElement('li');
+    li.textContent = item.name + " - " + item.price + " zł";
+    cartItems.appendChild(li);
+    totalPrice += item.price;
+  });
+
+  totalPriceElement.textContent = "Całkowita cena: " + totalPrice.toFixed(2) + " zł";
+}
+
+// Przycisk "Dodaj do koszyka"
+document.querySelectorAll('.add-to-cart').forEach(button => {
+  button.addEventListener('click', () => {
+    const product = getProductData(button.dataset.product);
+    addToCart(product);
+  });
+});
+
+// Funkcja zwracająca dane produktu
+function getProductData(productId) {
+  const products = {
+    plyta: { name: "Płyta ALKOMANDO", price: 79.99 },
+    koszulka: { name: "Koszulka ALKOMANDO", price: 49.99 },
+    bluza: { name: "Bluza ALKOMANDO", price: 129.99 },
+    box: { name: "Box ALKOMANDO", price: 199.99 }
+  };
+
+  return products[productId];
+}
 </script>
 </body>
 </html>
