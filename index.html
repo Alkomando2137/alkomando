@@ -152,6 +152,63 @@
   max-width: 90%;
   max-height: 80%;
 }
+/* Stylizacja nawigacji */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #1a1a1a;
+  padding: 10px;
+}
+
+/* Standardowy wygląd linków */
+nav a {
+  color: #fff;
+  margin: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Kolor linku przy najechaniu */
+nav a:hover {
+  color: #b30000;
+}
+
+/* Styl przycisków z ikonkami */
+.social-icon {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 10px;
+  font-size: 24px;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #1a1a1a;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Kolory dla poszczególnych ikon */
+.social-icon.instagram {
+  background-color: #e1306c;
+  color: white;
+}
+
+.social-icon.facebook {
+  background-color: #1877f2;
+  color: white;
+}
+
+.social-icon.youtube {
+  background-color: #ff0000;
+  color: white;
+}
+
+/* Efekt przy najechaniu */
+.social-icon:hover {
+  background-color: #b30000;
+  color: white;
+}
   </style>
 </head>
 <body>
@@ -160,13 +217,24 @@
     <img src="logo-placeholder.png" alt="Logo ALKOMANDO">
   </header>
 
-  <nav>
-    <a href="#onas">O nas</a>
-    <a href="#sklep">Sklep</a>
-    <a href="#galeria">Galeria</a>
-    <a href="#muzyka">Muzyka</a>
-    <a href="#kontakt">Kontakt</a>
-  </nav>
+ <nav>
+  <a href="#onas">O nas</a>
+  <a href="#sklep">Sklep</a>
+  <a href="#galeria">Galeria</a>
+  <a href="#muzyka">Muzyka</a>
+  <a href="#kontakt">Kontakt</a>
+
+  <!-- Ikony mediów społecznościowych -->
+  <a href="https://www.instagram.com/rambo_p2ws" target="_blank" class="social-icon instagram">
+    <i class="fab fa-instagram"></i>
+  </a>
+  <a href="https://www.facebook.com/profile.php?viewas=100000686899395&id=100055085780151" target="_blank" class="social-icon facebook">
+    <i class="fab fa-facebook"></i>
+  </a>
+  <a href="https://www.youtube.com/@alkomando2137" target="_blank" class="social-icon youtube">
+    <i class="fab fa-youtube"></i>
+  </a>
+</nav>
 
   <section id="onas">
     <h1>O nas</h1>
